@@ -72,3 +72,52 @@ The purpose of this lab is to develop practical skills in Linux system administr
 - User and permission management
 - Basic security hardening
 - Technical documentation
+
+## Linux File Permissions Troubleshooting
+
+### Scenario
+The `testuser` account could not access `/company/employee-data.txt`.
+
+### Initial Permissions
+The file initially had:
+
+```text
+-rw-------
+
+**Investigation**
+I verified
+-Current User
+-Group Membership
+-File Ownership
+-File Permissions
+
+**Commands Used:**
+-whoami
+-id
+-groups
+-ls -l
+
+**Root Cause**
+The it-support group had no permissions on the file.
+
+**Resolution**
+-Changed the file permissions using:
+sudo chmod 660 /company/employee-data.txt
+
+**Verification**
+
+-Verified that testuser, as a member of the it-support group, could read and write to the file.
+
+**Commands Practiced**
+-whoami
+-id
+-groups
+-ls -l
+-chmod
+-chown
+-su
+-cat
+
+
+
+
