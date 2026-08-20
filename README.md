@@ -50,6 +50,19 @@ The purpose of this lab is to develop practical skills in Linux system administr
 - [x] Enabled UFW firewall
 - [x] Allowed SSH through the firewall
 - [x] Connected to Ubuntu Server remotely from Windows using SSH
+  [x] Created Linux users and security groups
+- [x] Configured group-based directory permissions
+- [x] Tested user access using the `analyst` account
+- [x] Verified write access using Linux file permissions
+
+## Access Control Lab
+Created a dedicated `securityteam` Linux group and an `analyst` user.
+A protected directory was created at `/opt/security-project` with permissions configured so that:
+- The `root` user owns the directory
+- Members of `securityteam` have read, write, and execute access
+- Other users have no access
+- The `analyst` account was added to the 'securityteam' group and successfully created a test file within the protected directory.
+This demonstrates basic Linux user management, group-based access control, file permissions, and the principle of least privilege.
 
 ## Upcoming Tasks
 
